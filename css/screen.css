@@ -279,6 +279,8 @@ input::placeholder {
     display: flex;
     align-items: center;
 
+    margin-top: 32px;
+
     /*text*/
     font-size: 16px;
     font-weight: 600;
@@ -307,7 +309,7 @@ input::placeholder {
     Main app wrapper
 */
 .c-app{
-   max-width: 400px;
+   max-width: 359px;
    margin: auto;
 }
 
@@ -322,6 +324,49 @@ input::placeholder {
     ---
     Horizon with sun visualisation
 */
+.c-hoizon__bottom{
+    max-width: 359px;
+    position: absolute;
+    bottom: 0px;
+}
+.c-horizon__line{
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--color-front);
+    margin-bottom: 34px;
+    padding-top: 7px;
+}
+
+.c-horizon__time{
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.c-horizon__sky-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+
+    padding-top: 22px;
+    padding-right: 40px;
+}
+
+.c-horizon__sky {
+    position: relative;
+    height: 100%;
+}
+
+.c-horizon__sun {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+
+    transform: translateY(22px)
+}
 
 /*------------------------------------*\
 #UTILITIES
@@ -343,6 +388,10 @@ input::placeholder {
     Change the theme using CSS vars.
 */
 
+.is-night {
+    --color-front: var(--color-back);
+    --color-back: var(--color-front);
+ }
 /* Night version: just switch the light and dark vars */
 
 /*------------------------------------*\
