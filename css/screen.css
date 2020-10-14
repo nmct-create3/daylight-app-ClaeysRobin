@@ -1,17 +1,39 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
+@font-face {
+    font-family: "WorkSans Web";
+    font-weight: 400;
+    src: url("../fonts/WorkSans-Regular.ttf") format("ttf")
+}
 
+@font-face {
+    font-family: "WorkSans Web";
+    font-weight: 600;
+    src: url("../fonts/WorkSans-Medium.ttf") format("ttf")
+}
+
+@font-face {
+    font-family: "WorkSans Web";
+    font-weight: 800;
+    src: url("../fonts/WorkSans-Bold.ttf") format("ttf")
+}
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
 
 :root {
     /* colors */
+    --color-back: #CCE7FF;
+    --color-front: #0F3557;
 
     /* opacity */
 
     /* transitions */
+
+    /*logo width & height */
+    --sun-width: 22px;
+    --sun-height: 22px;
 }
 
 /*------------------------------------*\
@@ -27,10 +49,15 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
+    font-family: "WorkSans Web", Helvetica, arial, sans-serif;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "zero" 1;
+
+    /* page colors */
+    background-color: var(--color-back);
+    color: var(--color-front);
 }
 
 *,
@@ -249,7 +276,13 @@ input::placeholder {
 */
 
 .c-logo {
+    display: flex;
+    align-items: center;
 
+    /*text*/
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
 }
 
 /*
@@ -258,8 +291,10 @@ input::placeholder {
     The sun
 */
 
-.c-sun {
-
+.c-sun{
+    width: var(--sun-width);
+    height: var(--sun-height);
+    margin-right: 8px;
 }
 
 .c-logo .c-sun {
@@ -271,6 +306,16 @@ input::placeholder {
     ---
     Main app wrapper
 */
+.c-app{
+   max-width: 400px;
+   margin: auto;
+}
+
+.c-app__summary{
+    font-size: 28px;
+    line-height: 40px;
+
+}
 
 /*
     Component: Horizon
@@ -286,6 +331,9 @@ input::placeholder {
     Utilities: Mute
     Mute with opacity
 */
+.u-muted{
+    opacity: 60%;
+}
 
 /*------------------------------------*\
 #STATES
