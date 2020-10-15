@@ -389,8 +389,8 @@ input::placeholder {
 */
 
 .is-night {
-    --color-front: var(--color-back);
-    --color-back: var(--color-front);
+    --color-front: #CCE7FF;
+    --color-back:  #0F3557;
  }
 /* Night version: just switch the light and dark vars */
 
